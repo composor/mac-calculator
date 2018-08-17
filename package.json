@@ -20,7 +20,7 @@
     "babel-preset-env": "^1.6.0",
     "bluebird": "~2.9.24",
     "browser-sync": "^2.12.10",
-    "composi": "^2.3.4",
+    "composi": "^2.6.5",
     "gulp": "^3.9.1",
     "gulp-better-rollup": "^1.1.1",
     "gulp-cssnano": "^2.1.2",
