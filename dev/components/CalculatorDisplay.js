@@ -1,4 +1,4 @@
-import {h} from 'composi'
+import { h } from 'composi'
 import { getFormattedValue } from '../utils/helper'
 
 

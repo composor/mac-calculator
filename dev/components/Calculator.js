@@ -1,6 +1,6 @@
-import {h, Component } from 'composi'
-import {CalculatorDisplay} from './CalculatorDisplay'
-import {CalculatorKey} from './CalculatorKey'
+import { h, Component } from 'composi'
+import { CalculatorDisplay } from './CalculatorDisplay'
+import { CalculatorKey } from './CalculatorKey'
 import { CalculatorOperations, DigitKeys } from '../utils/helper'
 
 
@@ -160,11 +160,11 @@ class Calculator extends Component {
     const clearText = clearDisplay ? 'C' : 'AC'
 
     return (
-      <div className="calculator">
+      <div class="calculator">
         <CalculatorDisplay value={displayValue} />
-        <div className="calculator-keypad">
-          <div className="input-keys">
-            <div className="function-keys">
+        <div class="calculator-keypad">
+          <div class="input-keys">
+            <div class="function-keys">
               <CalculatorKey
                 className="key-clear"
                 onClick={() => clearDisplay ? this.clearDisplay() : this.clearAll()}
@@ -188,12 +188,11 @@ class Calculator extends Component {
             </div>
             <div className="digit-keys">
               {
-                DigitKeys.map(el =>
+                DigitKeys.map(number =>
                   <CalculatorKey
-                    key={`key-${el}`}
-                    className={`key-${el}`}
-                    onClick={() => this.inputDigit(el)}
-                    keyValue={el}
+                    className={`key-${number}`}
+                    onClick={() => this.inputDigit(number)}
+                    keyValue={number}
                   >
                   </CalculatorKey>
                 )
@@ -210,8 +209,7 @@ class Calculator extends Component {
           <div className="operator-keys">
             {
               CalculatorOperations.map(item => (
-                <CalculatorKey 
-                key={item.name}
+                <CalculatorKey
                 className={`key-${item.name}`}
                 onClick={() => this.performOperation(item.key)}
                 keyValue={item.symbol}
